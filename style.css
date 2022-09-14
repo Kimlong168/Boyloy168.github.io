@@ -1,0 +1,712 @@
+
+/*-----This is scrollbar----------------*/
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 47px solid #edbc07;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 66px solid #171616;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #1b2224;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+/*Home page*/
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/*------------------------------------------------This is header*/
+
+header {
+  position: fixed;  
+  top: 0px;        
+  width: 100%; 
+  z-index: 10;
+}
+
+#white{
+  width: 100%;
+  height:77px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+nav#nav-about{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #313131;
+  border-radius: 50px;
+  margin: 10px;
+}
+.nav-about {
+  padding: 1em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #FAAF18;
+  font-weight: bold;
+}
+.nav-about:hover{
+  
+  background-color: #1c1b1b;
+}
+#brand-name{
+  padding-left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FAAF18;
+  position: absolute;
+  left: 40px;
+}
+#menu{
+  display: none;
+  cursor: pointer;
+}
+#login-btn{
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  background-color: transparent;
+  color: #eee;
+  font-weight: bold;
+  border: 1px #eee solid;
+  border-radius: 20px;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+}
+#login-btn:hover{
+  background-color: #514f4f;
+}
+#login-btn:active{
+  opacity: 0.5;
+}
+
+/*-----------------------------------------------This is Drop down menu*/
+.dropdown{
+  position: relative;
+}
+.dropdown:hover > a:first-child {
+  color: #eee;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top:45px;
+  min-width: 160px;
+  background-color: #313131;
+}
+.dropdown-content > a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  padding: 15px;
+}
+.dropdown-content > a:hover {
+  background-color: #1a1919;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+
+
+
+/*-----------------------------------------------This is poster*/
+
+#poster{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em;
+  margin-bottom: 40px;
+
+  animation-name: move;
+  animation-duration:1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count:calc(1);
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+
+}
+@keyframes move{
+from{
+  position: relative;
+  bottom: -50px;
+}
+to{
+  position: relative;
+  bottom: 0px;
+}
+}
+h1{
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  color: #191C1E;
+  margin: 0;
+}
+
+p.poster-text{
+  width: 60%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-sub{
+  background-color: #FBC91B;
+  color:#191C1E;
+  font-size: 1.5em;
+  font-weight: bold;
+  min-height: 70px;
+  width: 220px;
+  border-radius: 40px;
+  border:transparent;
+  cursor: pointer;
+
+  animation-name: move1;
+  animation-duration:2s;
+  animation-timing-function: ease;
+  animation-iteration-count:calc(1);
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+
+}
+@keyframes move1{
+  from{
+    position: relative;
+    bottom: -30px;
+  }
+  to{
+    position: relative;
+    bottom: 0px;
+  }
+}
+.btn-sub:hover{
+  background-color: #fbca1bb0;
+}
+
+/*--------------------------------------------This is about social media icon*/
+
+#member {
+  width: 100%;
+}
+#member-title{
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: #191C1E;
+  margin: 0;
+}
+#member-text{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  animation-name: move2;
+  animation-duration:1s;
+  animation-timing-function: ease;
+  animation-iteration-count:calc(1);
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+
+}
+@keyframes move2{
+  from{
+    position: relative;
+    bottom: -50px;
+  }
+  to{
+    position: relative;
+    bottom: 0px;
+  }
+  
+}
+.icon-media > a, .icon-media-text{
+  padding: 1em;
+  font-size: 2em;
+  color:#1c1b1b;
+  font-weight: bold;
+  background-color: #FBC91B;
+  cursor: pointer;
+  transition: all 1s;
+}
+.icon-media > a:hover{
+  color: #eee;
+ /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+/*-------------------------------------this is up comimg events and hot news*/
+
+h2.title-text{
+  font-size: 3em;
+  font-weight: bold;
+  text-align: left;
+  color: #191C1E;
+  margin: 1em 1em;
+}
+.title-text > i{
+  font-size: 0.7em;
+  color: #FBC91B;
+}
+#member-photo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.member-photo{
+  width: 30%;
+  height: 400px;
+  border-radius: 10px;
+  background-repeat: round;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.member-photo:hover{
+  width: 33%;
+  height: 420px;
+  box-shadow: 10px 10px 10px gray;
+}
+ #sub{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #cfcfe8;
+  margin: 20px;
+  margin-top: 70px;
+  padding: 40px;
+  border-radius: 100px;
+  transition:all 1s;
+ }
+ #sub:hover{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+ }
+ #sub > h2{
+  text-align: center;
+ }
+
+/*---------------------------------------------------This is footer-------------------------------------------*/
+
+footer{
+  height: 500px;
+  background-color: #313131;
+  border-radius: 30px;
+  margin: 80px 50px 50px 50px;
+}
+#top-of-footer{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 20px 10px;
+}
+#logo-footer{
+  box-sizing: border-box;
+  color: #eee;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+#rightSide-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+h4.title-footer{
+  font-size: 20px;
+  color:#FBC91B;
+  font-weight: bold;
+}
+.info{
+  font-size: 18px;
+  color: #eee;
+  line-height:2.5em;
+  cursor: pointer;
+}
+.info:hover{
+  font-weight: bold;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(156,82,180,1) 38%, rgba(184,78,159,1) 64%, rgba(252,70,107,1) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+#media-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #FBC91B;
+}
+.icon-media-footer, .media-text-footer{
+  padding: 0.5em 0.8em;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 1s;
+}
+.icon-media-footer:hover{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.icon-media-footer >a{
+  color:#1c1b1b;
+  cursor: pointer;
+  transition: all 1s;
+}
+.icon-media-footer >a:hover{
+  color: white;
+}
+#copyright{
+  position: absolute;
+  right: 70px;
+}
+
+/*--------------------------------------------This is menu-bar*/
+
+#menu-bar{
+  width: 100%;
+  height: 100%;
+  background-color: #1c1b1b;
+  position: fixed;
+  top: 0px;
+  transform: translate(-100%,0);
+  z-index: 20;  
+}
+#menuBar-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1.5em;
+  background-color: #514f4f;
+  box-sizing: border-box;
+}
+#brand-name-menuBar{
+  font-size: 25px;
+  font-weight: bold;
+  color: #FAAF18;
+}
+
+#btn-back{
+  cursor: pointer;
+  font-size: 25px;
+  color: #eee;
+  position: absolute;
+  right: 30px;
+  
+}
+
+#nav-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px;
+  margin-top: 40px;
+}
+.nav-bar {
+  padding: 1em;
+  font-size: 25px;
+  text-decoration: none;
+  color: #FAAF18;
+  font-weight: bold;
+}
+.nav-bar:hover{
+  color: #eee;
+  background-color: #1c1b1b;
+}
+
+#login-btn-menuBar {
+  background-color: transparent;
+  color: #eee;
+  font-weight: bold;
+  border: 1px #eee solid;
+  border-radius: 20px;
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+}
+#login-btn-menuBar:hover {
+  color:#FAAF18;
+  border: 1px #FAAF18 solid;
+  
+}
+
+
+
+/*--------------------------------------------------Responsive webpage*/
+
+
+@media screen and (max-width:850px) {
+  .member-photo {
+    height: 280px;
+}
+.member-photo:hover{
+  height: 300px;
+}
+}
+@media screen and (max-width:800px){
+  .dropdown:hover .dropdown-content{
+    display: none;
+  }
+  #login-btn{
+    display: none;
+  }
+  nav#nav-about{
+    justify-content: flex-end;
+  }
+  .nav-about:hover{
+    border-radius:2em;
+  }
+
+  h1{
+    font-size: 3.5em;
+  }
+  p.poster-text{
+    width: 70%;
+  }
+  h2.title-text{
+    font-size: 2.6em;
+  }
+  #member-title{
+    font-size: 2.7em;
+  }
+  footer{
+    height: 450px;
+  }
+  #logo-footer{
+    font-size: 1.8em;
+  }
+  h4.title-footer{
+    font-size: 17px;
+  }
+  .info{
+    font-size:15px
+  }
+  #copyright{
+    display: none;
+  }
+}
+@media screen and (max-width:670px) {
+  a.nav-about{
+    visibility: hidden;
+  }
+  #menu{
+    font-size: 25px;
+    color: #eee;
+    display: table;
+    position: absolute;
+    right: 30px;
+  }
+  h1{
+    font-size: 3em;
+  }
+  p.poster-text{
+    width: 80%;
+  }
+  .icon-media > a, .icon-media-text{
+    padding: 0.7em;
+    font-size: 1.8em;
+  }
+  h2.title-text{
+    font-size: 2.3em;
+  }
+  #member-title{
+    font-size: 2.5em;
+  }
+  .member-photo {
+    height: 250px;
+ }
+ .member-photo:hover{
+  height: 265px;
+ }
+ 
+ #logo-footer{
+  font-size: 1.5em;
+}
+  h4.title-footer{
+    font-size: 15px;
+  }
+  .info{
+    font: size 14px;
+    line-height: 3.3em;
+  }
+  #media-footer{
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  }
+  .media-text-footer{
+    font-size: 1.5em;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width:600px) {
+  .member-photo {
+    height: 220px;
+ }
+ .member-photo:hover{
+  height: 225px;
+ }
+ 
+  .media-text-footer{
+    display: none;
+  }
+  #media-footer{
+    justify-content: center;
+  }
+}
+@media screen and (max-width:560px) {
+  #member-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .member-photo{
+    width:70%;
+    height: 380px;
+    margin: 10px;
+    
+  }
+  .member-photo:hover{
+    width: 72%;
+    height: 400px;
+  }
+  footer{
+    margin: 80px 20px 80px 20px;
+  }
+}
+
+@media screen and (max-width:500px){
+
+  .icon-media > a, .icon-media-text{
+    padding: 0.5em;
+    font-size: 1.5em;
+  }
+  h2.title-text{
+    font-size: 1.8em;
+  }
+  .member-photo{
+    width:80%;
+    height: 380px;
+    margin: 10px;
+    
+  }
+  .member-photo:hover{
+    width: 82%;
+    height: 400px;
+  }
+  footer{
+    height: 350px;
+  }
+  #logo-footer{
+    font-size: 1.1em;
+  }
+    h4.title-footer{
+      font-size: 13px;
+    }
+    .info{
+      font-size :11px;
+      line-height: 3.6em;
+    }
+
+}
+@media screen and (max-width:420px) {
+  
+  footer{
+    height: 650px;
+  }
+  #rightSide-footer{
+    flex-wrap: wrap;
+  padding-left: 45px;
+  }
+  .heading{
+    width: 45%;
+  }
+  #logo-footer{
+    font-size: 1.5em;
+  }
+    h4.title-footer{
+      font-size: 16px;
+    }
+    .info{
+      font-size :14px;
+      line-height: 3em;
+    }
+    .icon-media-footer, .media-text-footer{
+      padding: 0.5em 0.8em;
+      font-size: 1.2em;
+    }
+}
+@media screen and (max-width:370px) {
+  .icon-media > a, .icon-media-text{
+    font-size: 1em;
+  }
+  
+}
+@media screen and (max-width:340px) {
+  h2.title-text{
+    font-size:1.5em ;
+  }
+  .member-photo{
+    width:80%;
+    height: 300px;
+    margin: 10px;
+  }
+  .member-photo:hover{
+    width: 82%;
+    height: 320px;
+  }
+  #rightSide-footer{
+  padding-left: 25px;
+  }
+}

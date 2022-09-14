@@ -1,0 +1,158 @@
+
+
+/* This is Mission and vision*/
+
+#mission-title, #partner-title {
+  margin-top:95px;
+  margin-bottom: 15px;
+  font-size: 2.3em;
+  cursor: pointer;
+}
+#partner-title {
+  margin-top:20px;
+}
+
+#mission{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  align-items: flex-start;
+  background-color: #eee;
+  width: 100%;
+  box-sizing: border-box;
+}
+.mission{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  background-color:#eee;
+}
+.vision.mission {
+ border-left: 1px solid #313131;
+}
+.mission:first-child {
+  border-right: 1px solid #313131;
+}
+.mission-title {
+  color: #FAAF18;
+  font-weight: bold;
+  font-size: 2em;
+  transition: all 0.5s;
+}
+.mission-title:hover {
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.mission > img {
+  width: 30%;
+  cursor:crosshair;
+  transition:width 0.8s;
+}
+.mission > img:hover {
+  width: 35%;
+}
+
+.mission p{
+  width: 90%;
+  color:#191C1E;
+  font-size: 1.2em;
+}
+
+/* This is main-partners*/
+
+#partner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main-partner{
+  width:40%;
+}
+.main-partner > a > img {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+  transition:bottom 0.8s;
+}
+.main-partner > a > img:hover {
+  bottom: 20px;
+  border-bottom: 3px solid #13d741;
+}
+.main-partner > a > img[title=cadt]:hover {
+  border-bottom: 3px solid #20193b;
+}
+
+    
+#btn-partner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+#button-partner {
+ /* width: 140px;
+  height: 30px;
+*/
+  padding: 0.5em;
+  background-color: rgb(218, 51, 51);
+  border: none;
+  color: #eee;
+  border-radius: 3px;
+  transition: opacity 0.2s;
+  font-size: 15px;
+}
+#button-partner:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#button-partner:active {
+  opacity: 0.3;
+}
+
+
+
+/*-------------------------------Responsive webpage---------------------------------*/
+@media screen and (max-width:750px) {
+  .mission p{
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width:625px) {
+  #mission-title, #partner-title {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+  } 
+  #mission{
+    flex-direction: column;
+    align-items: center;
+  }
+  .mission{
+    width: 80%;
+  }
+  .mission-title {
+    font-size: 1.7em;
+  }
+  .vision.mission {
+    border-left: none;
+   }
+   .mission:first-child {
+     border-right: none;
+   }
+   .mission p{
+    font-size: 1em;
+    text-align: justify;
+  }
+   #button-partner{
+    font-size: 12px;
+   }
+}

@@ -1,0 +1,244 @@
+h2.news {
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+h2.all-news{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.recent-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #eee;
+}
+
+.left-side{
+  padding: 15px;
+  width: 35%;
+}
+.news-photo > img {
+  max-height: 400px;
+  width: 90%;
+}
+.news-title{
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.date  {
+  color: gray;
+}
+.right-side{
+  width: 50%;
+  padding: 15px;
+}
+.right-side > p:first-child{
+  margin-top: 0px;
+}
+
+
+/*---------------------this is recent new bottom-------------------------*/
+
+.second-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+}
+
+
+/*------------------------This is all news------------------------------*/
+
+#allnews{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: white;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  min-width: 160px;
+}
+.box-news{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 5px 5px 0px gray;
+  cursor: pointer;
+  margin: 5px;
+  margin-bottom: 40px;
+  transition: all 1s;
+}
+.box-news:hover{
+  box-shadow: 5px 5px 0px #282827;
+}
+.box-news > img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.box-news > img:hover {
+  opacity: 0.7;
+}
+.title-allnews{
+  font-size: 20px;
+  font-weight: bold;
+  color: #191C1E;
+  text-transform: uppercase;
+  max-height: 285px;
+  overflow: auto;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.date-news{
+ align-self: flex-start;
+ margin-top: 10px;
+ color: gray;
+}
+
+.title-allnews::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.title-allnews::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.title-allnews::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 47px solid #edbc07;
+  border-radius: 50px;
+}
+.title-allnews::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+.title-allnews::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+.title-allnews::-webkit-scrollbar-track {
+  background: #666666;
+  border: 66px solid #171616;
+  border-radius: 50px;
+}
+.title-allnews::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+.title-allnews::-webkit-scrollbar-track:active {
+  background: #1b2224;
+}
+.title-allnews::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/*---------------------Responsive Webpage----------------------------------*/
+
+@media screen and (max-width:1000px) {
+  
+  .right-side{
+    width: 65%;
+    max-height: 600px;
+    overflow: auto;
+    text-align: justify;
+  }
+  .right-side::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  .news-title {
+    font-size: 26px;
+  }
+
+}
+
+@media screen and (max-width:850px) {
+  .news-title {
+    font-size: 24px;
+  }
+  #recent-news2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .second-news{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .title-allnews{
+    font-size: 18px;
+  }
+  .date-news{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .news-title {
+    font-size: 22px;
+  }
+  .title-allnews{
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .date-news{
+    font-size: 12px;
+  }
+  .col{
+    width: 28%;
+  }
+}
+@media screen and (max-width:600px) {
+  .news-title {
+    font-size: 21px;
+  }
+  .title-allnews{
+    font-size: 13px; 
+  }
+  .date-news{
+    font-size: 10px;
+  }
+  .col{
+    min-width: 120px;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .news-title {
+    font-size: 20px;
+  }
+  .title-allnews{
+    font-size: 10px;
+  }
+  .box-news{
+    box-shadow: 2px 2px 0px gray;
+  }
+  .box-news:hover{
+    box-shadow: 2px 2px 0px #282827;
+  }
+  .date-news{
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .news-title {
+    font-size: 18px;
+  }
+  #allnews{
+    flex-direction: column;
+    align-items: center;
+  }
+  .col{
+    width: 80%;
+  }
+}
